@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sailor Wil | Handmade Ships in Bottles on 30A, Florida</title>
+<meta name="description" content="One-of-a-kind ships in bottles, carved by hand from raw wood on Florida's Emerald Coast. Personalized gifts and custom replicas of your own boat. Serving 30A, Rosemary Beach, Seaside and Panama City Beach.">
+<meta property="og:title" content="Sailor Wil | Ships in Bottles, Made by Hand on 30A">
+<meta property="og:description" content="One-of-a-kind ships in bottles from Florida's Emerald Coast. Commission a replica of your own boat.">
+<meta property="og:image" content="https://YOUR-DOMAIN/images/hero-sand-ship.jpg">
+<!-- TODO after deploy: replace YOUR-DOMAIN with the real address so link previews show the photo -->
+<meta property="og:url" content="https://YOUR-DOMAIN/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sailor Wil","description":"Handmade ships in bottles and custom boat replicas on Florida's 30A.","areaServed":["Rosemary Beach","Alys Beach","Seaside","WaterColor","Santa Rosa Beach","Panama City Beach"],"address":{"@type":"PostalAddress","addressRegion":"FL","addressCountry":"US"},"telephone":"+1-850-775-0136","sameAs":["https://www.instagram.com/sailorwil9"]}</script>
+<meta name="theme-color" content="#1B2B3A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛵</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --harbor:#1B2B3A;      /* deep navy ink */
+  --harbor-soft:#34465A;
+  --glass:#DCE5E1;       /* sea-glass */
+  --sail:#F4F5F1;        /* sailcloth */
+  --bottle:#4E6B5C;      /* bottle green */
+  --brass:#9C7A45;       /* fine accents */
+  --drift:#5F564C;       /* secondary text */
+  --display:"Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --body:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --max:1180px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--sail);color:var(--harbor);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(244,245,241,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(27,43,58,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.mark{font-family:var(--display);font-size:1.7rem;font-weight:600;text-decoration:none;letter-spacing:.01em}
+.nav{display:flex;gap:28px;align-items:center;font-size:.95rem}
+.nav a:not(.btn){text-decoration:none;color:var(--harbor-soft)}
+.nav a:not(.btn):hover{color:var(--harbor)}
+.btn{display:inline-block;background:var(--harbor);color:var(--sail);text-decoration:none;padding:12px 22px;border-radius:2px;font-weight:500;font-size:.95rem;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--bottle)}
+.btn.ghost{background:transparent;color:var(--harbor);box-shadow:inset 0 0 0 1px var(--harbor)}
+.btn.ghost:hover{background:var(--harbor);color:var(--sail)}
+@media (max-width:760px){.nav .hide-sm{display:none}.nav{gap:16px}}
+
+/* hero */
+.hero{position:relative;padding:72px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.5rem,5.2vw,4.4rem);line-height:1.04;margin:0 0 28px;letter-spacing:-.01em}
+.hero .lede{font-size:1.12rem;max-width:36ch;color:var(--drift);margin:0 0 36px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero figure{margin:0;position:relative;z-index:1}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 55%}
+.hero figcaption{font-size:.85rem;color:var(--drift);margin-top:10px}
+/* the horizon: one brass line crossing the whole hero, behind the photo */
+.horizon{position:absolute;left:0;right:0;top:62%;height:1px;background:var(--brass);opacity:.55;transform-origin:left;animation:draw 1.6s cubic-bezier(.2,.7,.2,1) .2s both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-width:860px){
+  .hero{padding:24px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero figure{order:-1}
+  .hero figure img{aspect-ratio:4/3}
+  .hero figcaption{display:none}
+  .hero .ctas .btn{flex:1 1 180px;text-align:center}
+  .horizon{display:none}
+}
+
+/* story */
+.story{background:var(--glass);padding:112px 0}
+.story .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+.story .maker{margin:0}.story .maker img{width:100%;aspect-ratio:1;object-fit:cover;object-position:75% 40%}.story figcaption{font-size:.85rem;color:var(--drift);margin-top:10px}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(2rem,3.6vw,3rem);line-height:1.1;margin:0 0 24px}
+.story p{max-width:60ch;margin:0 0 18px}
+.story .quote-old{font-family:var(--display);font-style:italic;font-size:1.5rem;line-height:1.35;color:var(--bottle);border-left:1px solid var(--brass);padding-left:22px;margin:32px 0 0;max-width:34ch}
+@media (max-width:860px){.story{padding:72px 0}.story .wrap{grid-template-columns:1fr;gap:40px}}
+.quoteband{background:var(--harbor);color:var(--sail);padding:0}
+.quoteband .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center;padding-top:96px;padding-bottom:96px}
+.quoteband img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.quoteband blockquote{margin:0}
+.quoteband p{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.9rem,3.6vw,3.1rem);line-height:1.2;margin:0 0 24px;max-width:22ch}
+.quoteband cite{font-style:normal;color:#C9A56B;font-size:.95rem}
+@media (max-width:860px){.quoteband .wrap{grid-template-columns:1fr;gap:36px;padding-top:64px;padding-bottom:64px}.quoteband img{aspect-ratio:4/3}}
+
+/* craft */
+.craft{padding:112px 0}
+.craft .head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.craft .head p{max-width:44ch;margin:0;color:var(--drift)}
+.facts{display:flex;gap:48px}
+.facts div{font-size:.9rem;color:var(--drift)}
+.facts b{white-space:nowrap;display:block;font-family:var(--display);font-weight:600;font-size:2.4rem;line-height:1;color:var(--harbor);margin-bottom:6px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px}
+.steps li{counter-increment:s}
+.steps img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:18px}
+.steps h3{margin:0 0 6px;font-size:1.05rem;font-weight:600;display:flex;gap:12px;align-items:baseline}
+.steps h3::before{content:counter(s);font-family:var(--display);font-size:1.5rem;color:var(--brass);line-height:1}
+.steps p{margin:0;color:var(--drift);max-width:44ch}
+.build{margin-top:96px;padding-top:48px;border-top:1px solid rgba(27,43,58,.14)}
+.build h3{font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.1rem);margin:0 0 28px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.strip figure{margin:0}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.strip figcaption{font-size:.9rem;color:var(--drift);margin-top:10px}
+@media (max-width:860px){.craft{padding:72px 0}.steps{grid-template-columns:1fr 1fr;gap:36px 16px}.steps img{aspect-ratio:1}.facts{gap:28px}.facts b{font-size:2rem}.build{margin-top:64px}.strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -28px;padding:0 28px 8px}.strip figure{flex:0 0 78%;scroll-snap-align:start}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.steps img{aspect-ratio:3/2}}
+
+/* collection */
+.collection{background:var(--harbor);color:var(--sail);padding:112px 0}
+.collection h2{color:var(--sail)}
+.collection .intro{max-width:56ch;color:#C9D3D6;margin:0 0 56px}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.gallery button{all:unset;cursor:zoom-in;display:block;position:relative}
+.gallery button:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+.gallery .ph img{width:100%;height:100%;object-fit:cover}
+.gallery{align-items:start}
+.gallery .cap{display:flex;justify-content:space-between;gap:12px;padding-top:12px;font-size:.92rem}
+.gallery .cap span:last-child{color:#9FB0B6}
+.gallery .g-a{grid-column:span 7}.g-a .ph{aspect-ratio:4/3}
+.gallery .g-b{grid-column:span 5}.g-b .ph{aspect-ratio:4/5}
+.gallery .g-c{grid-column:span 4}.g-c .ph{aspect-ratio:3/4}
+.gallery .g-d{grid-column:span 8}.g-d .ph{aspect-ratio:16/10}
+.gallery .g-e{grid-column:span 6}.g-e .ph{aspect-ratio:4/3}
+.ph{overflow:hidden;background:#243647}
+@media (max-width:760px){.collection{padding:72px 0}.gallery{grid-template-columns:1fr}.gallery>*{grid-column:1/-1!important}.gallery .ph{aspect-ratio:4/3!important}}
+
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1400px);max-height:92vh}
+dialog::backdrop{background:rgba(12,20,28,.9)}
+dialog img{max-height:84vh;width:auto;margin:0 auto}
+dialog p{color:var(--sail);text-align:center;margin:12px 0 0;font-size:.95rem}
+dialog .x{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:18px;background:none;border:0;color:var(--sail);font-size:2rem;cursor:pointer;line-height:1}
+
+/* pricing */
+.pricing{padding:112px 0 96px}
+.pricing .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+.pricing .note{color:var(--drift);max-width:40ch}
+.tiers{margin:0;padding:0;list-style:none}
+.tiers li{display:grid;grid-template-columns:1fr auto;gap:8px 32px;padding:28px 0;border-top:1px solid rgba(27,43,58,.14)}
+.tiers li:last-child{border-bottom:1px solid rgba(27,43,58,.14)}
+.tiers h3{font-family:var(--display);font-weight:600;font-size:1.7rem;margin:0;line-height:1.1}
+.tiers .price{font-family:var(--display);font-size:1.5rem;white-space:nowrap}
+.tiers .price small{font-family:var(--body);font-size:.8rem;color:var(--drift);margin-right:6px}
+.tiers p{grid-column:1/-1;margin:0;color:var(--drift);max-width:58ch}
+@media (max-width:860px){.pricing{padding:72px 0}.pricing .wrap{grid-template-columns:1fr;gap:32px}}
+
+.gifts{padding:112px 0 0}
+.gifts .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+.gifts .note{color:var(--drift);max-width:40ch;margin:0 0 28px}
+.gifts .tiers li{grid-template-columns:1fr}
+.gifts .plate{margin:40px 0 0}.gifts .plate img{width:100%;aspect-ratio:4/5;object-fit:cover}.gifts .plate figcaption{font-size:.85rem;color:var(--drift);margin-top:10px}
+@media (max-width:860px){.gifts .plate img{aspect-ratio:4/3}.gifts{padding:72px 0 0}.gifts .wrap{grid-template-columns:1fr;gap:32px}}
+/* commission */
+.commission{background:var(--glass);padding:112px 0}
+.commission .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.commission .copy p{max-width:48ch}
+.commission img{margin-top:32px;width:100%;aspect-ratio:16/10;object-fit:cover}
+form{display:grid;gap:18px;background:var(--sail);padding:36px;border-radius:2px}
+label{display:grid;gap:6px;font-size:.9rem;font-weight:500}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--harbor);background:#fff;border:1px solid rgba(27,43,58,.22);border-radius:2px;padding:12px 14px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fine{font-size:.85rem;color:var(--drift);margin:0}
+.sendrow{display:flex;gap:12px;flex-wrap:wrap}.sendrow .btn{flex:1 1 180px;text-align:center}
+.error{color:#9B2C2C;font-size:.9rem;margin:0;min-height:1.2em}
+@media (max-width:860px){.commission{padding:72px 0}.commission .wrap{grid-template-columns:1fr;gap:40px}form{padding:24px}.row{grid-template-columns:1fr}}
+
+/* local */
+.local{padding:88px 0;text-align:center}
+.local h2{margin-bottom:14px}
+.towns{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--bottle);max-width:40ch;margin:0 auto 18px;line-height:1.4}
+.local p{color:var(--drift);max-width:52ch;margin:0 auto}
+
+footer{background:var(--harbor);color:#C9D3D6;padding:56px 0 48px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+footer .mark{color:var(--sail);display:block;margin-bottom:8px}
+footer em{font-family:var(--display);font-size:1.15rem;color:var(--sail);display:block;max-width:44ch}
+footer a{color:var(--sail);display:inline-block;padding:8px 0}
+
+/* instagram + faq */
+.ig{padding:96px 0;border-top:1px solid rgba(27,43,58,.1)}
+.ig .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.ig p{color:var(--drift);max-width:52ch;margin:0}
+.faq{padding:0 0 112px}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+.faq details{border-top:1px solid rgba(27,43,58,.14);padding:20px 0}
+.faq details:last-child{border-bottom:1px solid rgba(27,43,58,.14)}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:1.5rem;line-height:1;color:var(--brass)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:12px 0 0;color:var(--drift);max-width:60ch}
+@media (max-width:860px){.ig{padding:64px 0}.ig .wrap{grid-template-columns:1fr;gap:24px}.faq{padding-bottom:72px}.faq .wrap{grid-template-columns:1fr;gap:24px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#">Sailor Wil</a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="#story">Story</a>
+      <a class="hide-sm" href="#collection">Collection</a>
+      <a class="hide-sm" href="#gifts">Gifts</a>
+      <a class="hide-sm" href="#pricing">Pricing</a>
+      <a class="hide-sm" href="https://www.instagram.com/sailorwil9" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn" href="#commission">Commission a boat</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="horizon" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h1>Ships in bottles, built by hand on 30A.</h1>
+      <p class="lede">Each boat is carved from raw wood and built inside a rescued bottle on Florida's Emerald Coast. Every bottle is different, so every piece is one of a kind. Commission a replica of your own boat.</p>
+      <div class="ctas">
+        <a class="btn" href="#commission">Commission your boat</a>
+        <a class="btn ghost" href="#collection">See the work</a>
+      </div>
+    </div>
+    <figure>
+      <img src="images/hero-sand-ship.jpg" alt="A small wooden sailing ship with white sails on white sand and seashells inside a clear bottle tied with jute twine" fetchpriority="high">
+      <figcaption>A two-masted ship on white sand and shells</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <figure class="maker">
+      <img src="images/maker.jpg" alt="Wil, a man with a gray beard and glasses, working at a small vise on his dining table" loading="lazy">
+      <figcaption>Wil at his worktable</figcaption>
+    </figure>
+    <div>
+      <h2>A craft very few still practice</h2>
+      <p>Ships in bottles were once a pastime of sailors on long voyages. Today very few people still build them by hand, because there is no shortcut: every hull, mast and sail has to be shaped small enough to pass through the neck of a bottle, then raised and set in place inside the glass.</p>
+      <p>Wil started with a love of woodworking and a simple thought. The bottles he came across along the coast were too beautiful to throw away. What if each one held a boat?</p>
+      <p>Every bottle is rescued and upcycled from here on the Emerald Coast. Its shape decides the boat: some stand upright, some lie on their side, and no two are ever the same.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quoteband" aria-label="Wil's motto">
+  <div class="wrap">
+    <img src="images/sunset-ship.jpg" alt="Silhouette of a hand-carved tall ship against an orange setting sun" loading="lazy">
+    <blockquote>
+      <p>“The art of building a boat lies not only in the wood you cut, but in the dream you anchor on the horizon.”</p>
+      <cite>Wil's motto</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="craft" id="craft">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>From raw wood to glass</h2>
+        <p>Nothing here comes from a kit. Each boat is shaped, painted and rigged by hand, then built inside the bottle through its neck.</p>
+      </div>
+      <div class="facts">
+        <div><b>10–12</b>hours per boat</div>
+        <div><b>30+</b>bottles finished</div>
+        <div><b>1</b>of each, ever</div>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><img src="images/step-bottles.jpg" alt="A basket of empty clear and green glass bottles" loading="lazy"><h3>The bottle chooses the boat</h3><p>The shape and size of the glass decide what fits: a slim sloop for a tall bottle, a tall ship or liner for a wide one.</p></li>
+      <li><img src="images/step-hull.jpg" alt="A hand holding a freshly carved pale wooden hull" loading="lazy"><h3>Carving the hull</h3><p>The hull is cut and shaped from a block of raw wood, then sanded smooth by hand.</p></li>
+      <li><img src="images/step-details.jpg" alt="A wooden hull in a vise with tiny brass pins lit by morning sun" loading="lazy"><h3>Building the details</h3><p>Decks, cabins, cannons and portholes are added piece by piece, at a scale where every millimeter shows.</p></li>
+      <li><img src="images/step-paint.jpg" alt="Hands painting a small wooden part with a fine brush" loading="lazy"><h3>Painting by hand</h3><p>Every stripe, porthole and waterline is painted with a fine brush.</p></li>
+      <li><img src="images/step-sails.jpg" alt="A carved Viking longship with a red and white striped sail in window light" loading="lazy"><h3>Masts, sails and rigging</h3><p>Masts and spars are whittled to size, sails are cut and painted, and the rigging is tied thread by thread.</p></li>
+      <li><img src="images/step-glass.jpg" alt="Wil holding up a finished sailboat in a bottle to inspect it" loading="lazy"><h3>Into the glass</h3><p>The boat goes in through the neck and is set in place inside, then mounted on a wooden stand with a name plate burned into the wood.</p></li>
+    </ol>
+
+    <div class="build">
+      <h3>One build, start to finish: the Titanic</h3>
+      <div class="strip">
+        <figure><img src="images/titanic-1.jpg" alt="A rough wooden block for the Titanic's deck, drilled for the funnels" loading="lazy"><figcaption>A block of wood, drilled for the funnels</figcaption></figure>
+        <figure><img src="images/titanic-2.jpg" alt="The carved Titanic hull with four wooden funnels in place" loading="lazy"><figcaption>Hull carved, funnels set</figcaption></figure>
+        <figure><img src="images/titanic-3.jpg" alt="The unpainted Titanic with rows of drilled portholes and thread rigging" loading="lazy"><figcaption>Every porthole drilled one by one, then the rigging</figcaption></figure>
+        <figure><img src="images/titanic.jpg" alt="The finished, painted Titanic inside a square glass bottle" loading="lazy"><figcaption>Painted and sealed in the bottle</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="wrap">
+    <h2>Recent work</h2>
+    <p class="intro">A look at finished pieces. Each one is unique and can't be made twice, so the best way to get yours is to commission it.</p>
+    <div class="gallery">
+      <button class="g-a" data-full="images/titanic.jpg" data-cap="Titanic, ocean liner">
+        <div class="ph"><img src="images/titanic.jpg" alt="Hand-painted Titanic with four yellow funnels inside a square bottle" loading="lazy"></div>
+        <div class="cap"><span>Titanic</span><span>Ocean liner</span></div>
+      </button>
+      <button class="g-b" data-full="images/pirate.jpg" data-cap="Pirate ship with black sails">
+        <div class="ph"><img src="images/pirate.jpg" alt="Dark pirate ship with black tattered sails and a skull and crossbones flag inside a bottle" loading="lazy"></div>
+        <div class="cap"><span>Pirate ship</span><span>Black sails</span></div>
+      </button>
+      <button class="g-c" data-full="images/seashell-sailboat.jpg" data-cap="Sailboat over a jar of seashells">
+        <div class="ph"><img src="images/seashell-sailboat.jpg" alt="White and navy sailboat in a corked bottle resting on a jar of seashells" loading="lazy"></div>
+        <div class="cap"><span>Sailboat</span><span>Coastal classic</span></div>
+      </button>
+      <button class="g-d" data-full="images/galleon.jpg" data-cap="Two-masted tall ship">
+        <div class="ph"><img src="images/galleon.jpg" alt="Dark wooden two-masted tall ship with billowing paper sails in a round bottle" loading="lazy"></div>
+        <div class="cap"><span>Tall ship</span><span>Two masts</span></div>
+      </button>
+      <button class="g-e" data-full="images/viking.jpg" data-cap="Viking longship, before the bottle">
+        <div class="ph"><img src="images/viking.jpg" alt="Carved Viking longship with a red and white striped sail and painted shields" loading="lazy"></div>
+        <div class="cap"><span>Viking longship</span><span>Before the bottle</span></div>
+      </button>
+      <button class="g-e" data-full="images/daniela.jpg" data-cap="Daniela">
+        <div class="ph"><img src="images/daniela.jpg" alt="Small sailboat with a red and ochre hull and cream sail inside a corked bottle, with a burned wooden name plate" loading="lazy"></div>
+        <div class="cap"><span>Daniela</span><span>Sailboat</span></div>
+      </button>
+      <button class="g-d" data-full="images/lugger.jpg" data-cap="Sailboat in a handled jug">
+        <div class="ph"><img src="images/lugger.jpg" alt="Orange and ochre sailboat with life rings along the hull inside a large glass jug with a handle" loading="lazy"></div>
+        <div class="cap"><span>Coastal sailboat</span><span>In a handled jug</span></div>
+      </button>
+      <button class="g-c" data-full="images/booby.jpg" data-cap="Atobá, sailboat on white sand">
+        <div class="ph"><img src="images/booby.jpg" alt="Sailboat inside a tall upright bottle with white sand at the bottom" loading="lazy"></div>
+        <div class="cap"><span>Atobá</span><span>On white sand</span></div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="gifts" id="gifts">
+  <div class="wrap">
+    <div>
+      <h2>A gift they won't find anywhere else</h2>
+      <p class="note">You can't buy this in a store. Each piece is built by hand, one at a time, and personalized on its wooden name plate with a name, a date or a short phrase. It's a gift made to be kept for years.</p>
+      <a class="btn" href="#commission">Plan a gift</a>
+      <figure class="plate"><img src="images/name-plate.jpg" alt="Close-up of a sailboat in a bottle with a wooden name plate reading Daniela, burned into the wood" loading="lazy"><figcaption>Every piece gets its own name plate</figcaption></figure>
+    </div>
+    <ul class="tiers">
+      <li><h3>For someone you love or admire</h3><p>A parent, a partner, a mentor, a best friend. Their name, burned into the wood by hand.</p></li>
+      <li><h3>Birthdays and anniversaries</h3><p>Put the date that matters on the name plate: the year you met, the day you married, the year they were born.</p></li>
+      <li><h3>Christmas and the New Year</h3><p>Something that stays on the shelf long after the wrapping paper is gone. Order early, since every piece takes time.</p></li>
+      <li><h3>A home on the coast</h3><p>The finishing touch for a new beach house on 30A, or a thank-you for the hosts who welcomed you.</p></li>
+      <li><h3>Retirements, Father's Day and boat lovers</h3><p>Their own boat, or the boat they always dreamed of, sailing inside a bottle.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div>
+      <h2>Pricing</h2>
+      <p class="note">Every piece is priced by size and detail. These are starting points; you'll get an exact quote before any work begins.</p>
+      <p class="note">Every piece comes on a wooden stand with its own name plate, burned into the wood by hand. Name it after a person, a place or the boat itself.</p>
+    </div>
+    <!-- TODO: confirm prices with Wil -->
+    <ul class="tiers">
+      <li><h3>Classic</h3><span class="price"><small>from</small>$175</span><p>A sailboat or sloop in a single-mast rig, hand painted and mounted on a wooden stand with a name plate.</p></li>
+      <li><h3>Signature</h3><span class="price"><small>from</small>$350</span><p>Tall ships, liners and multi-mast rigs with fine rigging and more detail, like the Titanic above.</p></li>
+      <li><h3>Your boat</h3><span class="price"><small>from</small>$500</span><p>A replica of a real boat from your photos: your yacht, your fishing boat, the one your father sailed. A gift nobody else can give.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="commission" id="commission">
+  <div class="wrap">
+    <div class="copy">
+      <h2>Commission your boat</h2>
+      <p>Tell Wil about the boat you have in mind. If it's a real boat, have a few photos ready to share. He'll reply with an idea for the bottle, a price and a timeline.</p>
+      <p>Pieces make memorable gifts for birthdays, retirements, weddings, and anyone who has ever loved a boat. Planning a holiday gift? Reach out early, since every piece is built one at a time.</p>
+      <img src="images/at-work.jpg" alt="Wil shaping a small part with a rotary tool next to an empty glass bottle" loading="lazy">
+    </div>
+    <form id="order" novalidate>
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <div class="row">
+        <label>Type of piece
+          <select name="type">
+            <option>A replica of my boat</option>
+            <option>A personalized gift</option>
+            <option>Classic sailboat</option>
+            <option>Tall ship or liner</option>
+            <option>Not sure yet</option>
+          </select>
+        </label>
+        <label>Needed by<input name="date" type="date"></label>
+      </div>
+      <div class="row">
+        <label>Occasion
+          <select name="occasion">
+            <option>Just because</option>
+            <option>Birthday</option>
+            <option>Anniversary or wedding</option>
+            <option>Christmas or New Year</option>
+            <option>Retirement</option>
+            <option>Father's Day</option>
+            <option>For my own home</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Name plate text<input name="plate" placeholder="A name, date or short phrase" maxlength="40"></label>
+      </div>
+      <label>Tell us about the boat<textarea name="details" placeholder="Name of the boat, colors, the occasion, anything that matters to you" required></textarea></label>
+      <p class="error" id="err" role="alert"></p>
+      <div class="sendrow"><button class="btn" type="submit" data-via="sms">Send as a text</button><button class="btn ghost" type="submit" data-via="wa">Send on WhatsApp</button></div>
+      <p class="fine">Your message opens ready to send, and you can attach photos of your boat there. Wil replies by text only, so please don't call. Prefer email? <a id="mail" href="#">Write to Wil</a>.</p>
+    </form>
+  </div>
+</section>
+
+<section class="ig">
+  <div class="wrap">
+    <div>
+      <h2>Follow the build</h2>
+      <p>Wil shares every boat on Instagram, from the first block of wood to the day it goes into the glass.</p>
+    </div>
+    <a class="btn ghost" href="https://www.instagram.com/sailorwil9" target="_blank" rel="noopener">Follow @sailorwil9</a>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <div>
+      <!-- TODO: confirm every answer with Wil -->
+      <details><summary>How big are the pieces?</summary><p>Each piece is as big as its bottle. Most use a standard wine or spirits bottle, roughly 10 to 14 inches long, mounted on a wooden stand.</p></details>
+      <details><summary>How long does a custom boat take?</summary><p>It depends on the detail. Wil will give you a delivery date with your quote, so let him know early if it's for a birthday or holiday.</p></details>
+      <details><summary>Can I add a name or a message?</summary><p>Yes. Every piece has a wooden name plate, and Wil burns your text into it by hand. A name, a date or a short phrase works best, since the plate is small.</p></details>
+      <details><summary>Can I use my own bottle?</summary><p>Often, yes. A bottle from a wedding, an anniversary or a special trip makes the piece even more personal. Send a photo and Wil will tell you if the neck is wide enough.</p></details>
+      <details><summary>How do I pay?</summary><p>You'll agree on the price before any work begins. A deposit starts the build and the rest is due on delivery.</p></details>
+      <details><summary>How do I care for it?</summary><p>Keep it out of direct sun to protect the paint and sails, and dust the glass with a soft dry cloth.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="local">
+  <div class="wrap">
+    <h2>Made on the Emerald Coast</h2>
+    <p class="towns">Rosemary Beach, Alys Beach, Seaside, WaterColor, Santa Rosa Beach and Panama City Beach</p>
+    <p>Local pickup and hand delivery along 30A and Panama City Beach. Ask about shipping elsewhere in the US.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="mark" href="#">Sailor Wil</a>
+      <em>The art of building a boat lies not only in the wood you cut, but in the dream you anchor on the horizon.</em>
+    </div>
+    <div>
+      <a href="sms:+18507750136">Text Wil: (850) 775-0136</a> <span>(texts only)</span><br>
+      <a href="https://www.instagram.com/sailorwil9" target="_blank" rel="noopener">Instagram @sailorwil9</a><br>
+      <span>© <span id="yr"></span> Sailor Wil. Handmade in Florida.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Photo">
+  <button class="x" aria-label="Close">×</button>
+  <img alt="">
+  <p></p>
+</dialog>
+
+<script>
+/* ===== EDIT THESE ===== */
+const PHONE    = "18507750136";          // Wil's cell for texts and WhatsApp: country code + number, digits only, e.g. 18505551234
+const EMAIL    = "hello@example.com";     // Wil's email
+/* ====================== */
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('mail').href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Ship in a bottle commission");
+
+const lb = document.getElementById('lb');
+document.querySelectorAll('.gallery button').forEach(b => {
+  b.addEventListener('click', () => {
+    lb.querySelector('img').src = b.dataset.full;
+    lb.querySelector('img').alt = b.querySelector('img').alt;
+    lb.querySelector('p').textContent = b.dataset.cap;
+    lb.showModal();
+  });
+});
+lb.querySelector('.x').addEventListener('click', () => lb.close());
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+
+let via = "sms";
+document.querySelectorAll('.sendrow button').forEach(b => b.addEventListener('click', () => { via = b.dataset.via; }));
+document.getElementById('order').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target, err = document.getElementById('err');
+  if (!f.name.value.trim() || !f.details.value.trim()) {
+    err.textContent = "Add your name and a few words about the boat to continue.";
+    return;
+  }
+  err.textContent = "";
+  const msg = `Hi Wil! I'd like to commission a ship in a bottle.\n\nName: ${f.name.value.trim()}\nType: ${f.type.value}\nOccasion: ${f.occasion.value}\nName plate: ${f.plate.value.trim() || "Not sure yet"}\nNeeded by: ${f.date.value || "Flexible"}\n\n${f.details.value.trim()}`;
+  if (via === "wa") {
+    window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  } else {
+    window.location.href = "sms:+" + PHONE + "?&body=" + encodeURIComponent(msg);
+  }
+});
+</script>
+</body>
+</html>
